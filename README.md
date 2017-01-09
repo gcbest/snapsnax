@@ -13,10 +13,10 @@ https://github.com/SnapSnax/webapp
 * backend, Opentable API integration
 
 **Godfrey Best**
-* backend, Google Maps API integration
+* backend, Yelp API integration
 
 **Juanita Soranno**
-* backend, Yelp API integration
+* backend, Google Maps API integration
 
 **Nathaniel Shih**
 * frontend, Materialize design
