@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SnapSnax</title>
+    <!-- Stylesheets and scripts ===================================== -->
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Icons for Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<!-- Body ========================================================= -->
+
+<body>
+    <!-- Nav bar with site logo that returns to homepage -->
+    <nav>
+        <div class="nav-wrapper red darken-3">
+            <a href="index.html" class="brand-logo">SNAPSNAX</a>
+            <!-- ============================================================= -->
+            <!-- In case we want side links
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">sass</a></li>
+      <li><a href="">sass</a></li>
+      <li><a href="">sass</a></li>
+    </ul> -->
+            <!-- ============================================================== -->
+        </div>
+    </nav>
+    <!-- Parallax Container -->
+    <div class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br>
+                <br>
+                <!-- Header in the center of page -->
+                <h1 class="header center red-text text-darken-3">SnapSnax</h1>
+                <div class="row center">
+                    <h4 class="header col s12 red-text text-darken-3 light"><strong>Solving your food indecisions one meal at a time.</strong></h4>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="header col s12 red-text text-darken-3 light instructions"><strong>Step 1: Choose your Meal</strong></p>
+                </div>
+                <div class="row center">
+                    <!-- Button that opens up modal to food and $$$ choices -->
+                    <a class="waves-effect waves-light btn-large modal-trigger red darken-3" href="#modal1"><i class="material-icons left">star</i><i class="material-icons right">star</i>What are you having?</a>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- Parallax image top -->
+        <div class="parallax"><img src="assets/images/paperbag.jpg"></div>
+    </div>
+    <!-- Main container div -->
+    <div class="container">
+        <!-- ROW #1 -->
+        <div class="row">
+            <!-- Column #1 Row#1 -->
+            <div class="col s12">
+                <br>
+                <br>
+                <!-- <div class="row"> -->
+                <div class="card medium white darken-4">
+                    <div class="card-content white-text">
+                        <span class="card-title"></span>
+                        <!-- ====================================================================== -->
+                        <!-- Username input for firebase storage -->
+                        <!-- <div class="input-field col s6 red-text text-darken-3">
+                    <i class="material-icons prefix">account_circle</i> -->
+                        <!-- Input id: userName -->
+                        <!-- <input id="userName" type="text" class="">
+                    <label for="userName">Username</label>
+                </div> -->
+                        <!-- ====================================================================== -->
+                        <!-- Location input -->
+                        <div class="row center">
+                            <p class="header col s12 center-align red-text text-darken-3 light instructions"><strong>Step 2: Choose your Location</strong></p>
+                            <br>
+                        </div>
+                        <div class="row center">
+                            <div class="input-field col s4 red-text text-darken-3" id="locationInput">
+                                <i class="material-icons prefix">my_location</i>
+                                <!-- Input id: userLocation -->
+                                <input id="userLocation" type="text" class="" placeholder="City or Zip Code">
+                                <label for="userLocation">Location</label>
+                            </div>
+                        </div>
+                        <!-- Button to submit parameters and find a restaurant -->
+                        <div class="row center">
+                            <p class="header col s12 red-text text-darken-3 light instructions"><strong>Step 3: Let us Choose your Next Meal</strong></p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button class="btn waves-effect waves-light red darken-3 modal-trigger" id="FindRest" type="submit" name="action" href="#resultsModal">Find your restaurant
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                        <div class="modal" id="resultsModal">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col s12 m7">
+                                        <div id="results">
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m5">
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col m8">
+                                <div id="results">
+                                </div>
+                            </div>
+                            <div class="col m4">
+                                <div id="map"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- Results Div Column -->
+                </div>
+                <!-- Results Div Row -->
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <!-- Closes Column#1 Row#1 -->
+    <!-- Modal Trigger -->
+    </div>
+    <!-- Closes Row#1-->
+    <!-- ROW #2 -->
+    <div class="row">
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Pick your meal options!</h4>
+                <br>
+                <!-- Input field with food choices -->
+                <div class="input-field col s5">
+                    <select id="food" multiple icons ">
+      <option value=" " disabled selected>Choose your options!</option>
+      <option value="breakfast " data-icon="http://lorempixel.com/output/food-q-c-150-150-1.jpg " class="left circle ">Breakfast</option>
+      <option value="lunch " data-icon="http://lorempixel.com/output/food-q-c-150-150-2.jpg " class="left circle ">Lunch</option>
+      <option value="dinner " data-icon="http://lorempixel.com/output/food-q-c-150-150-3.jpg " class="left circle ">Dinner</option>
+      <option value="takeout " data-icon="http://lorempixel.com/output/food-q-c-150-150-4.jpg " class="left circle ">Take-out</option>
+      <option value="delivery " data-icon="http://lorempixel.com/output/food-q-c-150-150-5.jpg " class="left circle ">Delivery</option>
+    </select>
+    <!-- Labels the input field -->
+    <!-- <label>What would you like?</label> -->
+  </div>
+  <!-- Input field with price range -->
+  <div class="input-field col s3 offset-s1 ">
+   <!--  <select multiple icons">
+                        <option value="" disabled selected>Pick a price range!</option>
+                        <option value="" data-icon="http://lorempixel.com/output/food-q-c-150-150-1.jpg" class="left circle">$</option>
+                        <option value="" data-icon="http://lorempixel.com/output/food-q-c-150-150-2.jpg" class="left circle">$$</option>
+                        <option value="" data-icon="http://lorempixel.com/output/food-q-c-150-150-3.jpg" class="left circle">$$$</option>
+                        <option value="" data-icon="http://lorempixel.com/output/food-q-c-150-150-4.jpg" class="left circle">$$$$</option>
+                    </select> -->
+                    <!-- Labels the input field -->
+                    <!--     <label>How much are you looking to spend?</label> -->
+                </div>
+            </div>
+            <!-- Modal button -->
+            <div class="modal-footer">
+                <a href="#!" class=" submit modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Closes container div -->
+    <!-- Parallax bottom image -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/burger.jpg"></div>
+    </div>
+</body>
+<!-- Footer with copyright ================================================================== -->
+<footer class="page-footer red darken-3">
+    <div class="footer-copyright red darken-3">
+        <div class="container">
+            © 2016 Copyright SnapSnax
+            <!-- More links if we want -->
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+        </div>
+    </div>
+</footer>
+<!-- Scripts ================================================================================= -->
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNEH9ddgTnDDO-HPKQtW1INRnXiYkp5aA"></script>
+<!-- JavaScript -->
+<script type="text/javascript" src="assets/javascript/oauth.js"></script>
+<script type="text/javascript" src="assets/javascript/sha1.js"></script>
+<script type="text/javascript" src="assets/javascript/js.js"></script>
+
+</html>
