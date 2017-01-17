@@ -1,15 +1,4 @@
   $(document).ready(function(){
-// =========Start Firebase =========
-// Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCbTv3BkBJNDeICV4f0grvKiTPjyfcVEfE",
-    authDomain: "snapsnax.firebaseapp.com",
-    databaseURL: "https://snapsnax.firebaseio.com",
-    storageBucket: "",
-    messagingSenderId: "961593911482"
-  };
-  firebase.initializeApp(config);
-// =========End Firebase=========
 
 // =========Start Materialize=========
   // Document Ready with the Materialize triggers
@@ -87,7 +76,7 @@ $("#FindRest").on("click", function() {
 
     // An object which contains the information we are going to be passing into the OAuth functions
     var message = {
-        'action': 'http://api.yelp.com/v2/search',
+        'action': 'https://api.yelp.com/v2/search',
         'method': 'GET',
         'parameters': parameters
     };
