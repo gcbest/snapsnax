@@ -3,10 +3,10 @@
 // =========Start Materialize=========
   // Document Ready with the Materialize triggers
 
-  	//Parallax Trigger
+    //Parallax Trigger
     $('.parallax').parallax();
-  	// material select trigger
-  	$('select').material_select();
+    // material select trigger
+    $('select').material_select();
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -76,7 +76,7 @@ $("#FindRest").on("click", function() {
 
     // An object which contains the information we are going to be passing into the OAuth functions
     var message = {
-        'action': 'https://api.yelp.com/v2/search',
+        'action': 'http://api.yelp.com/v2/search',
         'method': 'GET',
         'parameters': parameters
     };
@@ -129,9 +129,9 @@ $("#FindRest").on("click", function() {
 
         // Format the response information and store them all inside one div
         var companyInfo = $("<div>")
-        companyInfo.append('<p class="red-text darken-3 shopName"><strong>'+ name + '</strong></p><br>');
-        companyInfo.append('<p class="red-text darken-3">'+ phone + '</p><br>');
-        companyInfo.append('<p class="red-text darken-3">'+ address + '</p><br>');
+        companyInfo.append('<h6 class="red-text darken-3">'+ name + '</h6><br>');
+        companyInfo.append('<h7 class="red-text darken-3">'+ phone + '</h7><br>');
+        companyInfo.append('<h7 class="red-text darken-3">'+ address + '</h7><br>');
         companyInfo.append('<img src="' + response.businesses[randomInt].image_url + '" width=150px height=150px>' + '<br>');
         companyInfo.append('<a class="btn waves-effect waves-light red darken-3" href=' + yelpURL + '>' + 'Link to Yelp' + '</a>' + '<br>');
         
@@ -177,8 +177,3 @@ function initMap(place) {
     });
 };
 // ========= End Google Maps API ======
-
-
-
-
-
