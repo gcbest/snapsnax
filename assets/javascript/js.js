@@ -76,7 +76,7 @@ $("#FindRest").on("click", function() {
 
     // An object which contains the information we are going to be passing into the OAuth functions
     var message = {
-        'action': 'http://api.yelp.com/v2/search',
+        'action': 'https://api.yelp.com/v2/search',
         'method': 'GET',
         'parameters': parameters
     };
