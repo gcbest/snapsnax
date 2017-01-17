@@ -2,15 +2,21 @@
 ## Solving your food indecisions one meal at a time.
 [Presentation Deck](https://docs.google.com/presentation/d/1FRkKvBG4a8UQ3irGt6S5TVn5gboCeyahciwxcvaBsGk/pub?start=false&loop=false&delayms=3000 "Presentation Deck")
 
+##Try it out:
+
+[https://snapsnax.herokuapp.com](snapsnax.herokuapp.com)
+
+https://github.com/SnapSnax/webapp
+
 ##Team:	
 **Allen Raymond**
 * backend, Opentable API integration
 
 **Godfrey Best**
-* backend, Google Maps API integration
+* backend, Yelp API integration
 
 **Juanita Soranno**
-* backend, Yelp API integration
+* backend, Google Maps API integration
 
 **Nathaniel Shih**
 * frontend, Materialize design
@@ -64,10 +70,3 @@ OAuth. How to read and implement API documentation. Materialize, and how it does
 
 ##What’s next for SnapSnax:
 A rebanding! In our research, we found that there is actually a company called SnapSnax that create delicious banana chips in the Philippines. Integrate Open Table API and Postmates for reservation and delivery functionality.
-
-
-##Try it out:
-
-[https://snapsnax.herokuapp.com](snapsnax.herokuapp.com)
-
-https://github.com/SnapSnax/webapp
