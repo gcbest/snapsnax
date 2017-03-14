@@ -4,7 +4,7 @@
 
 ##Try it out:
 
-[https://snapsnax.herokuapp.com](snapsnax.herokuapp.com)
+[https://snap-snax.herokuapp.com](https://snap-snax.herokuapp.com/)
 
 https://github.com/SnapSnax/webapp
 
